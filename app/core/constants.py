@@ -1,0 +1,6 @@
+"""Константы для приложения."""
+
+MAX_NAME_LENGTH = 100
+MIN_NAME_LENGTH = 5
+MIN_DESCRIPTION_LENGTH = 10
+MIN_FULL_AMOUNT = 1
