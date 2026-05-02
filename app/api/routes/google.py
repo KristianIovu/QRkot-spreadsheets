@@ -15,6 +15,9 @@ from app.services.google_api import (
 from app.services.investment import get_projects_by_completion_rate
 from app.core.config import settings
 
+# Константа для формирования ссылки на Google таблицу
+GOOGLE_SHEETS_URL = "https://docs.google.com/spreadsheets/d/"
+
 router = APIRouter(prefix="/google", tags=["Google"])
 
 
@@ -48,5 +51,5 @@ async def get_report(
     return {
         "message": "Отчёт создан",
         "spreadsheet_id": spreadsheet_id,
-        "url": f"https://docs.google.com/spreadsheets/d/{spreadsheet_id}",
+        "url": f"{GOOGLE_SHEETS_URL}{spreadsheet_id}",
     }
